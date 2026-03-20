@@ -1,7 +1,7 @@
 import Link from "next/link";
 import style from "./page.module.css";
 import image from "next/image"
-import dautin from ""
+import dautin from "Daltho"
 export default atividade01;
 
 

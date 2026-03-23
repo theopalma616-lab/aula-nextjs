@@ -1,0 +1,28 @@
+.container{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 96vh;
+    
+}
+.container label{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.button1{
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border: solid 2px black;
+}
+
+.button2{
+    background-color: black;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+}

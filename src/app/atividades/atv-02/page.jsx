@@ -3,7 +3,7 @@
 import { useState } from "react";
 import styles from "./page.module.css"
 
-export default function Exemplo03() {  
+export default function Atividade02() {  
 
     const [Som, setSom] = useState(0);
     const [Sub, setSub] = useState(0);
@@ -21,8 +21,9 @@ export default function Exemplo03() {
     return (
         <div className={styles.container}>
             <label>{`Contador de cliques: ${total}`}</label>    
-            <button onClick={() => handleSom()} className={styles.button1}>+1</button> <br/>
-            <button onClick={() => handleSub()} className={styles.button2}>-1</button>
+            <button onClick={() => handleSom()} className={styles.button1}>+1</button>
+           <div className={styles.btb}> <button onClick={() => handleSub()} className={styles.button2}>-1</button>
+           </div>
         </div>
     );
 }

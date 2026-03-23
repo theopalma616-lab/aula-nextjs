@@ -7,17 +7,18 @@
     
 }
 .container label{
-    font-size: 20px;
+    font-size: 30px;
     padding-bottom: 20px;
 }
 
 .button1{
     background-color: rgb(255, 255, 255);
-    height: 50px;
-    width: 100px;
+    height: 53px;
+    width: 103px;
     cursor: pointer;
     color: rgb(0, 0, 0);
     border: solid 2px black;
+    margin-bottom: 1rem;
 }
 
 .button2{
@@ -25,4 +26,17 @@
     height: 50px;
     width: 100px;
     cursor: pointer;
+    border: solid 2px white;
+
+    
+}
+
+.btb{
+    background-color: rgb(0, 0, 0);
+    border-radius: 1rem;
+    height: 5.5rem;
+    width:10.5rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }

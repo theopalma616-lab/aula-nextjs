@@ -12,7 +12,9 @@
 }
 
 .button{
-    background-color: black;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: solid 2px black;
     height: 50px;
     width: 100px;
     cursor: pointer;

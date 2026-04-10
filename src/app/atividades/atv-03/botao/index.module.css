@@ -1,0 +1,24 @@
+.botao {
+    text-align: 'center';
+    margin-top: '50px';
+    margin: 0.3rem;
+}
+.cadastrar {
+    background-color: rgb(66, 34, 139);
+}
+
+.editar {
+    background-color: rgb(69, 255, 125);
+}
+
+.listar {
+    background-color: rgb(69, 143, 255);
+}
+
+.excluir {
+    background-color: rgb(255, 69, 240);
+}
+
+.cancelar {
+    background-color: rgb(240, 36, 36);
+}

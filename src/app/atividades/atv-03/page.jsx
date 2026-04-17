@@ -26,7 +26,7 @@ function Exemplo04() {
             <Botao texto="editar" aoClicar={editar} acao={'editar'}/>
             <Botao texto="listar" aoClicar={listar} acao={'listar'}/>
             <Botao texto="excluir" aoClicar={excluir} acao={'excluir'}/>
-            <Botao texto="cancelar" aoClicar={cancelar} acao={'-'} />
+            <Botao texto="cancelar" aoClicar={cancelar} acao={'cancelar'} />
             </div>
         </div>
     );

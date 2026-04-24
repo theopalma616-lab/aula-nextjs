@@ -4,13 +4,15 @@
     flex-direction: column;
     justify-content: center; 
     align-items: center;    
-    height: 50vh;
+    height: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    border: 30px solid #fafafafa;
 }
 
 .formulario {     
     display: flex; 
-    flex-direction: column; 
+    flex-direction: column;
     margin-top: 5rem;
     max-width: 40rem;
 }

@@ -1,61 +1,67 @@
-import { useState } from "react";
-import styles from "./page.module.css";
+'use client'
 
-export default function Page() {
-  const [itens, setItens] = useState([]);
-  const [texto, setTexto] = useState("");
+import { useState } from 'react'
+import styles from './page.module.css'
 
-  function adicionar() {
-    if (texto.trim() === "") return;
-    setItens([...itens, texto]);
-    setTexto("");
-  }
+export default function FormComponent() {
+  const [texto, setTexto] = useState('')
+  const [lista, setLista] = useState([])
+  const [editando, setEditando] = useState(null)
 
-  function remover(index) {
-    setItens(itens.filter((_, i) => i !== index));
-  }
+  function handleSubmit(e) {
+    e.preventDefault()
+    if (!texto) return
 
-  function editar(index) {
-    const novoTexto = prompt("Editar item:", itens[index]);
-    if (novoTexto && novoTexto.trim() !== "") {
-      const copia = [...itens];
-      copia[index] = novoTexto;
-      setItens(copia);
+    if (editando !== null) {
+      const novaLista = [...lista]
+      novaLista[editando] = texto
+      setLista(novaLista)
+      setEditando(null)
+    } else {
+      setLista([...lista, texto])
     }
+
+    setTexto('')
+  }
+
+  function editarItem(index) {
+    setTexto(lista[index])
+    setEditando(index)
+  }
+
+  function excluirItem(index) {
+    setLista(lista.filter((_, i) => i !== index))
   }
 
   return (
     <div className={styles.container}>
-      <h1>Mockup CRUD Vite</h1>
+      <h1 className={styles.titulo}>Atividade 5 CRUD</h1>
 
-      <input
-        type="text"
-        placeholder="Digite algo..."
-        value={texto}
-        onChange={(e) => setTexto(e.target.value)}
-      />
+      <form onSubmit={handleSubmit} className={styles.formulario}>
+        <input
+          type="text"
+          placeholder="Digite algo..."
+          value={texto}
+          onChange={e => setTexto(e.target.value)}/>
 
-      <button className={styles.btnAdd} onClick={adicionar}>
-        + Adicionar
-      </button>
+        <button type="submit">
+          {editando !== null ? 'Salvar' : '+ Adicionar'}
+        </button>
+        
+      </form>
 
-      <ul className={styles.list}>
-        {itens.map((item, index) => (
-          <li key={index} className={styles.item}>
+      <div className={styles.lista}>
+        {lista.map((item, index) => (
+          <div key={index} className={styles.item}>
             <span>{item}</span>
 
-            <div className={styles.actions}>
-              <button onClick={() => editar(index)}>✏️</button>
-              <button
-                className={styles.delete}
-                onClick={() => remover(index)}
-              >
-                🗑️
-              </button>
+            <div className={styles.botoes}>
+              <button onClick={() => editarItem(index)}>✏️</button>
+              <button onClick={() => excluirItem(index)}>🗑️</button>
             </div>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
-  );
+  )
 }

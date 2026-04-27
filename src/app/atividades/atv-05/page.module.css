@@ -1,54 +1,57 @@
 .container {
-  background: #fff;
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 25px;
-  border-radius: 8px;
-  font-family: Arial, sans-serif;
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-input {
-  width: 100%;
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-}
-
-.btnAdd {
-  background: #6366f1;
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
+.titulo {
   margin-bottom: 20px;
 }
 
-.list {
-  list-style: none;
-  padding: 0;
+.formulario {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  
+}
+
+.formulario input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.formulario button {
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 0;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  font-size: 16px;
+  
 }
 
-.actions button {
-  margin-left: 8px;
-  background: transparent;
-  border: 2px solid #6366f1;
-  color: #6366f1;
+.botoes button {
+  margin-left: 10px;
   padding: 6px 10px;
-  border-radius: 6px;
+  border-radius: 8px;
+  border: 2px solid #6366f1;
+  background: none;
   cursor: pointer;
-}
-
-.delete {
-  border-color: #ef4444;
-  color: #ef4444;
 }

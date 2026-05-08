@@ -42,18 +42,18 @@ export default function FormComponent() {
           type="text"
           placeholder="Digite algo..."
           value={texto}
-          onChange={e => setTexto(e.target.value)}/>
+          onChange={e => setTexto(e.target.value)}
+        />
 
         <button type="submit">
           {editando !== null ? 'Salvar' : '+ Adicionar'}
         </button>
-        
       </form>
 
       <div className={styles.lista}>
         {lista.map((item, index) => (
           <div key={index} className={styles.item}>
-            <span>{item}</span>
+            <span className={styles.textoItem}>{item}</span>
 
             <div className={styles.botoes}>
               <button onClick={() => editarItem(index)}>✏️</button>

@@ -1,0 +1,58 @@
+.container {
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.titulo {
+  margin-bottom: 20px;
+}
+
+.formulario {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.formulario input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.formulario button {
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item {
+  display: flex;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+.textoItem {
+  flex: 1;
+  padding-bottom: 2px;
+}
+
+.botoes button {
+  margin-left: 10px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 2px solid #6366f1;
+  background: none;
+  cursor: pointer;
+}
